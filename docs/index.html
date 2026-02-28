@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keystrokes — Real-Time Input Overlay for Speedrunners</title>
+  <meta name="description" content="Lightweight input overlay for speedrunners. Display keyboard and mouse inputs in real-time with zero delay.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-inner">
+      <a href="#home" class="logo" aria-label="Keystrokes">
+        <span class="logo-typing">
+          <span class="logo-c">K</span><span class="logo-c">+</span><span class="logo-c">e</span><span class="logo-c">+</span><span class="logo-c">y</span><span class="logo-c">+</span><span class="logo-c">s</span><span class="logo-c">+</span><span class="logo-c">t</span><span class="logo-c">+</span><span class="logo-c">r</span><span class="logo-c">+</span><span class="logo-c">o</span><span class="logo-c">+</span><span class="logo-c">k</span><span class="logo-c">+</span><span class="logo-c">e</span><span class="logo-c">+</span><span class="logo-c">s</span>
+        </span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#download">Download</a></li>
+        <li><a href="#guide">Guide</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title reveal">
+          Real-Time Input Overlay<br>
+          <span class="accent">Built for Speedrunners</span>
+        </h1>
+        <p class="hero-desc reveal">
+          Keystrokes is a lightweight, standalone input visualizer for streamers and gamers. Inspired by tools like NohBoard, it runs as its own window—easy to capture in OBS—and shows keyboard and mouse inputs in real time, including combos like Ctrl+Shift or A+B, with instant updates and smooth performance.
+        </p>
+        <div class="hero-buttons reveal">
+          <a href="#download" class="btn btn-primary btn-hero">Download Now</a>
+        </div>
+      </div>
+      <div class="hero-preview reveal">
+        <div class="overlay-mockup">
+          <div class="mockup-label">Live overlay</div>
+          <div class="key-group key-group-combo" id="live-overlay-combo">
+            <span class="combo-placeholder" id="live-overlay-placeholder">—</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-title reveal">Built for the way you play</h2>
+      <p class="section-subtitle reveal">Everything you need to show inputs clearly—without getting in the way.</p>
+      <div class="feature-grid">
+        <article class="feature-card reveal">
+          <div class="feature-icon">⚡</div>
+          <h3>Real-Time Display</h3>
+          <p>Keys and mouse actions appear instantly. No lag, no buffering—what you press is what viewers see.</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon">🎨</div>
+          <h3>Custom Themes</h3>
+          <p>Match your stream with dark, light, or custom color schemes. Easy to tweak and save.</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon">📺</div>
+          <h3>OBS / Stream Integration</h3>
+          <p>Add as a window source. Works with OBS, Streamlabs, and other streaming software.</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon">🪶</div>
+          <h3>Lightweight Performance</h3>
+          <p>Runs in the background with minimal CPU and RAM. No impact on game or encode performance.</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon">✏️</div>
+          <h3>Fully Customizable Layout</h3>
+          <p>Position, size, and style the overlay to fit your layout. Show only the keys that matter.</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-icon">🖱️</div>
+          <h3>Mouse & Keys</h3>
+          <p>Keyboard and mouse inputs in one view—clicks, movement, and key combos in real time.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Examples / See it in action -->
+  <section class="examples" id="examples">
+    <div class="container">
+      <h2 class="section-title reveal">See it in action</h2>
+      <p class="section-subtitle reveal">Keystrokes in real runs and streams. Add your own screenshots or clips below.</p>
+      <div class="examples-grid">
+        <!-- Example 1: Replace src with your file (e.g. examples/example1.jpg or .gif) -->
+        <figure class="example-card reveal">
+          <div class="example-media">
+            <img src="./examples/example1.gif" alt="Keystrokes overlay during gameplay" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22225%22 viewBox=%220 0 400 225%22%3E%3Crect fill=%22%23141418%22 width=%22400%22 height=%22225%22/%3E%3Ctext fill=%22%23a1a1aa%22 font-family=%22Inter,sans-serif%22 font-size=%2214%22 x=%22200%22 y=%22115%22 text-anchor=%22middle%22%3EYour screenshot or GIF%3C/text%3E%3Ctext fill=%22%23666%22 font-family=%22Inter,sans-serif%22 font-size=%2212%22 x=%22200%22 y=%22135%22 text-anchor=%22middle%22%3Eexamples/example1.gif%3C/text%3E%3C/svg%3E'; this.onerror=null;">
+          </div>
+          <figcaption>Gameplay with overlay</figcaption>
+        </figure>
+        <!-- Example 2 -->
+        <figure class="example-card reveal">
+          <div class="example-media">
+            <img src="./examples/example2.png" alt="Keystrokes overlay on stream" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22225%22 viewBox=%220 0 400 225%22%3E%3Crect fill=%22%23141418%22 width=%22400%22 height=%22225%22/%3E%3Ctext fill=%22%23a1a1aa%22 font-family=%22Inter,sans-serif%22 font-size=%2214%22 x=%22200%22 y=%22115%22 text-anchor=%22middle%22%3EYour screenshot or GIF%3C/text%3E%3Ctext fill=%22%23666%22 font-family=%22Inter,sans-serif%22 font-size=%2212%22 x=%22200%22 y=%22135%22 text-anchor=%22middle%22%3Eexamples/example2.png%3C/text%3E%3C/svg%3E'; this.onerror=null;">
+          </div>
+          <figcaption>Showcase</figcaption>
+        </figure>
+        <!-- Example 3 -->
+        <figure class="example-card reveal">
+          <div class="example-media">
+            <img src="./examples/example3.gif" alt="Keystrokes overlay speedrun" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22225%22 viewBox=%220 0 400 225%22%3E%3Crect fill=%22%23141418%22 width=%22400%22 height=%22225%22/%3E%3Ctext fill=%22%23a1a1aa%22 font-family=%22Inter,sans-serif%22 font-size=%2214%22 x=%22200%22 y=%22115%22 text-anchor=%22middle%22%3EYour screenshot or GIF%3C/text%3E%3Ctext fill=%22%23666%22 font-family=%22Inter,sans-serif%22 font-size=%2212%22 x=%22200%22 y=%22135%22 text-anchor=%22middle%22%3Eexamples/example3.gif%3C/text%3E%3C/svg%3E'; this.onerror=null;">
+          </div>
+          <figcaption>Speedrun example</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guide Section -->
+  <section class="guide" id="guide">
+    <div class="container">
+      <h2 class="section-title reveal">Quick start</h2>
+      <p class="section-subtitle reveal">Get the overlay on screen in a few steps.</p>
+      <div class="guide-steps">
+        <div class="guide-step reveal">
+          <span class="guide-num">1</span>
+          <h3>Download & run</h3>
+          <p>Download Keystrokes, extract, and run the executable. No installer required.</p>
+        </div>
+        <div class="guide-step reveal">
+          <span class="guide-num">2</span>
+          <h3>Add to OBS</h3>
+          <p>In OBS, add a new Window Capture source and select the Keystrokes window. Apply a chroma key filter to the source to remove the window background so only the keys are visible.</p>
+        </div>
+        <div class="guide-step reveal">
+          <span class="guide-num">3</span>
+          <h3>Position & stream</h3>
+          <p>Move the overlay where you want it, then start your stream. Keys and mouse show in real time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Section -->
+  <section class="download" id="download">
+    <div class="container">
+      <div class="download-box reveal">
+        <h2 class="download-title">Get Keystrokes</h2>
+        <p class="download-version">Version 1.0.0</p>
+        <p class="download-tagline">Free and lightweight. No account required.</p>
+        <a href="https://github.com/mushymeow/KeyStrokes/releases/download/1.0.0/Input.History.zip" class="btn btn-primary btn-download" download target="_blank" rel="noopener">Download for Windows</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-copy">© 2025 Keystrokes. Built for speedrunners.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
